@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/nav_simulation"
+        android:icon="@android:drawable/ic_menu_edit"
+        android:title="Simulasi" />
+    <item
+        android:id="@+id/nav_features"
+        android:icon="@android:drawable/ic_menu_agenda"
+        android:title="Fitur" />
+    <item
+        android:id="@+id/nav_architecture"
+        android:icon="@android:drawable/ic_menu_share"
+        android:title="Arsitektur" />
+    <item
+        android:id="@+id/nav_about"
+        android:icon="@android:drawable/ic_menu_info_details"
+        android:title="Tentang" />
+</menu>
