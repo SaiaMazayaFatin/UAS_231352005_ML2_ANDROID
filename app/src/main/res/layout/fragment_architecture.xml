@@ -1,89 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="16dp"
-    android:background="@color/md_theme_background">
+    android:background="@color/md_theme_background"
+    android:padding="16dp">
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:gravity="center_horizontal">
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
         <TextView
             style="@style/TextAppearance.Material3.HeadlineMedium"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Arsitektur Model"
-            android:layout_marginBottom="16dp"/>
+            android:layout_marginBottom="16dp"
+            android:text="Arsitektur Model Deep Learning"
+            android:textColor="@color/md_theme_primary" />
 
         <com.google.android.material.card.MaterialCardView
             style="@style/Widget.Material3.CardView.Elevated"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="8dp">
-            <TextView
-                android:padding="16dp"
-                android:text="Input Layer (11 Fitur)"
-                android:gravity="center"
+            android:layout_marginBottom="24dp">
+
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"/>
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:adjustViewBounds="true"
+                    android:contentDescription="Visualisasi Arsitektur Model"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/model_simulation" />
+
+                <TextView
+                    style="@style/TextAppearance.Material3.LabelSmall"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:padding="4dp"
+                    android:text="Visualisasi alur model yang dibuat dengan Netron." />
+
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+        <com.google.android.material.card.MaterialCardView
+            style="@style/Widget.Material3.CardView.Outlined"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="8dp">
+            <LinearLayout android:orientation="vertical" android:padding="16dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <TextView style="@style/TextAppearance.Material3.TitleLarge" android:text="1. Input Layer" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                <TextView style="@style/TextAppearance.Material3.LabelLarge" android:layout_marginTop="4dp" android:text="Spesifikasi: 11 Fitur" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textColor="@color/md_theme_primary"/>
+                <TextView style="@style/TextAppearance.Material3.BodyMedium" android:layout_marginTop="8dp" android:lineSpacingExtra="4dp"
+                    android:text="Lapisan ini adalah gerbang masuk data. Ia menerima 11 fitur yang telah diproses (2 fitur numerik yang sudah di-scaling dan 9 fitur kategorikal dari one-hot encoding). Bentuk datanya adalah [1, 11], siap untuk diolah oleh lapisan selanjutnya."
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            </LinearLayout>
         </com.google.android.material.card.MaterialCardView>
 
-        <ImageView
-            android:src="@android:drawable/arrow_down_float"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:tint="@color/md_theme_primary"/>
+        <ImageView android:src="@android:drawable/arrow_down_float" android:layout_width="wrap_content" android:layout_height="wrap_content" app:tint="@color/md_theme_primary" android:layout_marginVertical="4dp"/>
 
         <com.google.android.material.card.MaterialCardView
-            style="@style/Widget.Material3.CardView.Elevated"
+            style="@style/Widget.Material3.CardView.Outlined"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="8dp">
-            <TextView
-                android:padding="16dp"
-                android:text="Dense Layer (32 neuron, ReLU) + Dropout"
-                android:gravity="center"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"/>
+            android:layout_marginHorizontal="8dp">
+            <LinearLayout android:orientation="vertical" android:padding="16dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <TextView style="@style/TextAppearance.Material3.TitleLarge" android:text="2. Hidden Layer 1 (Dense)" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                <TextView style="@style/TextAppearance.Material3.LabelLarge" android:layout_marginTop="4dp" android:text="Spesifikasi: 32 Neuron, Aktivasi ReLU, Regularisasi L2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textColor="@color/md_theme_primary"/>
+                <TextView style="@style/TextAppearance.Material3.BodyMedium" android:layout_marginTop="8dp" android:lineSpacingExtra="4dp"
+                    android:text="32 neuron di sini berfungsi untuk mulai belajar pola-pola kompleks dari data. Fungsi aktivasi ReLU digunakan karena efisien dan membantu mengatasi masalah vanishing gradient. Regularisasi L2 ditambahkan untuk mencegah bobot model menjadi terlalu besar, sebuah langkah awal melawan overfitting."
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            </LinearLayout>
         </com.google.android.material.card.MaterialCardView>
 
-        <ImageView
-            android:src="@android:drawable/arrow_down_float"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:tint="@color/md_theme_primary"/>
+        <ImageView android:src="@android:drawable/arrow_down_float" android:layout_width="wrap_content" android:layout_height="wrap_content" app:tint="@color/md_theme_primary" android:layout_marginVertical="4dp"/>
 
         <com.google.android.material.card.MaterialCardView
-            style="@style/Widget.Material3.CardView.Elevated"
+            style="@style/Widget.Material3.CardView.Outlined"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="8dp">
-            <TextView
-                android:padding="16dp"
-                android:text="Dense Layer (16 neuron, ReLU) + Dropout"
-                android:gravity="center"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"/>
+            android:layout_marginHorizontal="8dp">
+            <LinearLayout android:orientation="vertical" android:padding="16dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <TextView style="@style/TextAppearance.Material3.TitleLarge" android:text="3. Dropout Layer" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                <TextView style="@style/TextAppearance.Material3.LabelLarge" android:layout_marginTop="4dp" android:text="Spesifikasi: Rate 0.3 (30%)" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textColor="@color/md_theme_primary"/>
+                <TextView style="@style/TextAppearance.Material3.BodyMedium" android:layout_marginTop="8dp" android:lineSpacingExtra="4dp"
+                    android:text="Lapisan ini secara acak 'mematikan' 30% neuron dari lapisan sebelumnya selama pelatihan. Tujuannya adalah untuk mencegah model terlalu bergantung pada neuron tertentu, memaksanya untuk belajar jalur yang lebih kuat. Ini adalah teknik yang sangat efektif untuk mengurangi overfitting."
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            </LinearLayout>
         </com.google.android.material.card.MaterialCardView>
 
-        <ImageView
-            android:src="@android:drawable/arrow_down_float"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:tint="@color/md_theme_primary"/>
+        <ImageView android:src="@android:drawable/arrow_down_float" android:layout_width="wrap_content" android:layout_height="wrap_content" app:tint="@color/md_theme_primary" android:layout_marginVertical="4dp"/>
 
         <com.google.android.material.card.MaterialCardView
-            style="@style/Widget.Material3.CardView.Elevated"
+            style="@style/Widget.Material3.CardView.Outlined"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="8dp">
-            <TextView
-                android:padding="16dp"
-                android:text="Output Layer (1 neuron)"
-                android:gravity="center"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"/>
+            android:layout_marginHorizontal="8dp">
+            <LinearLayout android:orientation="vertical" android:padding="16dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <TextView style="@style/TextAppearance.Material3.TitleLarge" android:text="4. Hidden Layer 2 (Dense)" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                <TextView style="@style/TextAppearance.Material3.LabelLarge" android:layout_marginTop="4dp" android:text="Spesifikasi: 16 Neuron, Aktivasi ReLU, Regularisasi L2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textColor="@color/md_theme_primary"/>
+                <TextView style="@style/TextAppearance.Material3.BodyMedium" android:layout_marginTop="8dp" android:lineSpacingExtra="4dp"
+                    android:text="Lapisan kedua dengan neuron lebih sedikit bertujuan untuk lebih menyaring dan menggabungkan pola yang telah dipelajari menjadi representasi yang lebih abstrak dan relevan untuk prediksi."
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <ImageView android:src="@android:drawable/arrow_down_float" android:layout_width="wrap_content" android:layout_height="wrap_content" app:tint="@color/md_theme_primary" android:layout_marginVertical="4dp"/>
+
+        <com.google.android.material.card.MaterialCardView
+            style="@style/Widget.Material3.CardView.Outlined"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="8dp">
+            <LinearLayout android:orientation="vertical" android:padding="16dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <TextView style="@style/TextAppearance.Material3.TitleLarge" android:text="5. Dropout Layer" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                <TextView style="@style/TextAppearance.Material3.LabelLarge" android:layout_marginTop="4dp" android:text="Spesifikasi: Rate 0.3 (30%)" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textColor="@color/md_theme_primary"/>
+                <TextView style="@style/TextAppearance.Material3.BodyMedium" android:layout_marginTop="8dp" android:lineSpacingExtra="4dp"
+                    android:text="Lapisan Dropout diterapkan lagi untuk menjaga model tetap tergeneralisasi dan tidak menghafal data latih."
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <ImageView android:src="@android:drawable/arrow_down_float" android:layout_width="wrap_content" android:layout_height="wrap_content" app:tint="@color/md_theme_primary" android:layout_marginVertical="4dp"/>
+
+        <com.google.android.material.card.MaterialCardView
+            style="@style/Widget.Material3.CardView.Outlined"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="8dp">
+            <LinearLayout android:orientation="vertical" android:padding="16dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <TextView style="@style/TextAppearance.Material3.TitleLarge" android:text="6. Output Layer (Dense)" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                <TextView style="@style/TextAppearance.Material3.LabelLarge" android:layout_marginTop="4dp" android:text="Spesifikasi: 1 Neuron" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textColor="@color/md_theme_primary"/>
+                <TextView style="@style/TextAppearance.Material3.BodyMedium" android:layout_marginTop="8dp" android:lineSpacingExtra="4dp"
+                    android:text="Lapisan terakhir ini hanya memiliki satu neuron karena tujuan kita adalah regresi: memprediksi satu nilai kontinu, yaitu nilai ujian siswa. Lapisan ini tidak menggunakan fungsi aktivasi khusus, sehingga dapat menghasilkan output dalam rentang nilai apa pun."
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            </LinearLayout>
         </com.google.android.material.card.MaterialCardView>
 
     </LinearLayout>

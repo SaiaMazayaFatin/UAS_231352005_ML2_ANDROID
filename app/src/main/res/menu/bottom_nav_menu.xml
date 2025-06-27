@@ -4,6 +4,12 @@
         android:id="@+id/nav_simulation"
         android:icon="@android:drawable/ic_menu_edit"
         android:title="Simulasi" />
+
+    <item
+        android:id="@+id/nav_dataset"
+        android:icon="@android:drawable/ic_menu_save"
+        android:title="Dataset" />
+
     <item
         android:id="@+id/nav_features"
         android:icon="@android:drawable/ic_menu_agenda"
