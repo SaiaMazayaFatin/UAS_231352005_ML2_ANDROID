@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/md_theme_background"
+    android:scrollbars="none">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:clipToPadding="false"
+        android:padding="16dp">
+
+        <TextView
+            style="@style/App.TextAppearance.Headline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tentang Dataset SAP-4000"
+            android:textColor="@color/md_theme_primary"
+            android:layout_marginBottom="16dp" />
+
+        <com.google.android.material.card.MaterialCardView
+            style="@style/App.CardView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                style="@style/App.TextAppearance.Body"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:lineSpacingExtra="5dp"
+                android:padding="16dp"
+                android:text="Dataset SAP-4000 mencakup 4.000 data siswa yang telah dianonimkan, yang dikumpulkan secara cermat untuk menganalisis berbagai faktor yang memengaruhi kinerja akademik dalam sistem pendidikan menengah atas di Spanyol, yang berpuncak pada pencapaian Título de Bachiller.\n\nDengan mengenali kompleksitas pencapaian akademik, dataset ini mengintegrasikan beragam variabel, termasuk informasi demografis, kebiasaan belajar, mekanisme dukungan pendidikan, dan hasil ujian akhir. Pendekatan komprehensif ini memfasilitasi eksplorasi yang mendalam tentang bagaimana faktor-faktor ini berinteraksi dan berkontribusi terhadap keberhasilan siswa." />
+        </com.google.android.material.card.MaterialCardView>
+
+    </LinearLayout>
+</ScrollView>

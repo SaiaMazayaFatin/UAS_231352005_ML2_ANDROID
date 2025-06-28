@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/simulationFragment"
+    tools:context=".MainActivity"
+    android:id="@+id/main_nav">
+    <fragment
+        android:id="@+id/featuresFragment"
+        android:name="com.example.studentscorepredictor.FeaturesFragment"
+        android:label="Features" />
+    <fragment
+        android:id="@+id/simulationFragment"
+        android:name="com.example.studentscorepredictor.SimulationFragment"
+        android:label="Simulation" />
+    <fragment
+        android:id="@+id/datasetFragment"
+        android:name="com.example.studentscorepredictor.DatasetFragment"
+        android:label="Dataset" />
+    <fragment
+        android:id="@+id/architectureFragment"
+        android:name="com.example.studentscorepredictor.ArchitectureFragment"
+        android:label="Architecture" />
+    <fragment
+        android:id="@+id/aboutFragment"
+        android:name="com.example.studentscorepredictor.AboutFragment"
+        android:label="About" />
+</navigation>

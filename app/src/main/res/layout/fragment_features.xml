@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/md_theme_background"
+    android:scrollbars="none">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingStart="24dp"
+        android:paddingEnd="24dp"
+        android:paddingBottom="24dp"
+        android:paddingTop="16dp"
+        android:layout_marginBottom="16dp">
+
+        <TextView
+            style="@style/App.TextAppearance.Headline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Fitur dan Variabel Dataset"
+            android:textColor="@color/md_theme_primary"
+            android:layout_marginBottom="16dp"/>
+
+        <com.google.android.material.card.MaterialCardView style="@style/App.CardView" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="12dp">
+            <LinearLayout android:orientation="vertical" android:padding="16dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <TextView style="@style/App.TextAppearance.Body" android:text="Gender" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                <TextView style="@style/App.TextAppearance.Body" android:layout_marginTop="4dp" android:text="Jenis kelamin siswa berdasarkan laporan diri." android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                <TextView style="@style/App.TextAppearance.Body" android:layout_marginTop="8dp" android:textStyle="bold" android:text="Tipe: Categorical (nominal)\nNilai: Male, Female" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView style="@style/App.CardView" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="12dp">
+            <LinearLayout android:orientation="vertical" android:padding="16dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <TextView style="@style/App.TextAppearance.Body" android:text="Hours Studied/Week" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                <TextView style="@style/App.TextAppearance.Body" android:layout_marginTop="4dp" android:text="Rata-rata jumlah jam yang didedikasikan untuk belajar mandiri setiap minggu." android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                <TextView style="@style/App.TextAppearance.Body" android:layout_marginTop="8dp" android:textStyle="bold" android:text="Tipe: Numeric (continuous)\nNilai: 0.0 - 16.0 (jam)" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView style="@style/App.CardView" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="12dp">
+            <LinearLayout android:orientation="vertical" android:padding="16dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <TextView style="@style/App.TextAppearance.Body" android:text="Tutoring" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                <TextView style="@style/App.TextAppearance.Body" android:layout_marginTop="4dp" android:text="Menunjukkan apakah siswa menerima dukungan les tambahan." android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                <TextView style="@style/App.TextAppearance.Body" android:layout_marginTop="8dp" android:textStyle="bold" android:text="Tipe: Categorical (binary)\nNilai: Yes, No" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView style="@style/App.CardView" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="12dp">
+            <LinearLayout android:orientation="vertical" android:padding="16dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <TextView style="@style/App.TextAppearance.Body" android:text="Region" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                <TextView style="@style/App.TextAppearance.Body" android:layout_marginTop="4dp" android:text="Lingkungan tempat tinggal utama siswa." android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                <TextView style="@style/App.TextAppearance.Body" android:layout_marginTop="8dp" android:textStyle="bold" android:text="Tipe: Categorical (nominal)\nNilai: Urban, Rural" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView style="@style/App.CardView" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="12dp">
+            <LinearLayout android:orientation="vertical" android:padding="16dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <TextView style="@style/App.TextAppearance.Body" android:text="Attendance (%)" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                <TextView style="@style/App.TextAppearance.Body" android:layout_marginTop="4dp" android:text="Persentase total kehadiran siswa dalam kelas selama satu semester." android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                <TextView style="@style/App.TextAppearance.Body" android:layout_marginTop="8dp" android:textStyle="bold" android:text="Tipe: Numeric (continuous)\nNilai: 50.0 - 100.0 (%)" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView style="@style/App.CardView" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="12dp">
+            <LinearLayout android:orientation="vertical" android:padding="16dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <TextView style="@style/App.TextAppearance.Body" android:text="ParentEducation" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                <TextView style="@style/App.TextAppearance.Body" android:layout_marginTop="4dp" android:text="Tingkat pendidikan tertinggi yang dicapai oleh salah satu orang tua atau wali." android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                <TextView style="@style/App.TextAppearance.Body" android:layout_marginTop="8dp" android:textStyle="bold" android:text="Tipe: Categorical (ordinal)\nNilai: None, Primary, Secondary, Tertiary" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView style="@style/App.CardView" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="12dp">
+            <LinearLayout android:orientation="vertical" android:padding="16dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <TextView style="@style/App.TextAppearance.Body" android:text="Exam_Score (Target)" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                <TextView style="@style/App.TextAppearance.Body" android:layout_marginTop="4dp" android:text="Nilai ujian akhir yang telah ditimbang, yang mencerminkan kinerja akademik kumulatif." android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                <TextView style="@style/App.TextAppearance.Body" android:layout_marginTop="8dp" android:textStyle="bold" android:text="Tipe: Numeric (continuous)\nNilai: 10.0 - 100.0 (poin)" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+
+    </LinearLayout>
+</ScrollView>
